@@ -1,168 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Daniel Herz | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Herz - Digital Product Builder</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-    }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Caveat:wght@600&display=swap"
+        rel="stylesheet">
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero h1 {
-      font-size: 42px;
-      margin: 0;
-      color: white;
-    }
-
-    .hero p {
-      color: #94a3b8;
-      font-size: 18px;
-      margin-top: 10px;
-    }
-
-    .badge {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 6px 12px;
-      background: #1e293b;
-      border-radius: 20px;
-      font-size: 12px;
-      color: #38bdf8;
-    }
-
-    .section {
-      margin-top: 50px;
-    }
-
-    h2 {
-      border-left: 4px solid #38bdf8;
-      padding-left: 10px;
-      font-size: 22px;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 15px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      background: #243044;
-    }
-
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 15px;
-    }
-
-    .contact {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-      color: #94a3b8;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #38bdf8;
-      color: black;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-  </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<div class="container">
+    <!-- NAVBAR (Top Bar) -->
+    <nav class="navbar">
+        <div class="logo">Daniel <span>Herz</span></div>
+        <div class="nav-icons">
+            <button class="icon-btn" aria-label="Toggle Theme"><i class='bx bx-moon'></i></button>
+            <a href="#" class="icon-btn" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+            <a href="#" class="icon-btn" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+        </div>
+    </nav>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>Daniel Herz</h1>
-    <p>Digital Product Builder (AI-Assisted)</p>
-    <div class="badge">Building practical digital solutions</div>
-  </div>
+    <!-- MAIN DASHBOARD GRID (No Scroll) -->
+    <main class="dashboard-grid">
 
-  <!-- ABOUT -->
-  <div class="section">
-    <h2>About Me</h2>
-    <p>
-      I build digital products and web-based solutions using modern tools and AI-assisted workflows.
-      I focus on turning ideas into functional systems and improving them through continuous iteration and problem solving.
-    </p>
-  </div>
+        <!-- COLUMN 1: LEFT SIDE -->
+        <div class="grid-col col-left">
+            <!-- Hero Card -->
+            <div class="card hero-card">
+                <p class="greeting">Hi, I'm</p>
+                <h1 class="name">Daniel <span>Herz</span></h1>
+                <h2 class="title">Digital Product Builder (AI-Assisted)</h2>
+                <p class="description">
+                    I build practical digital solutions and web platforms that solve real problems. I combine
+                    independent thinking, problem solving, and AI-assisted workflows to turn ideas into functional
+                    products.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-sm" onclick="openModal()">
+                        <i class='bx bx-download'></i> View CV
+                    </button>
+                    <a href="mailto:Danoherz1999@gmail.com" class="btn btn-secondary btn-sm">
+                        <i class='bx bx-envelope'></i> Contact Me
+                    </a>
+                </div>
+            </div>
 
-  <!-- PROJECT -->
-  <div class="section">
-    <h2>Projects</h2>
+            <!-- About & Contact Card -->
+            <div class="card about-card">
+                <div class="card-header">
+                    <h3><i class='bx bx-user'></i> About & Contact</h3>
+                </div>
+                <div class="about-content">
+                    <p>Independent digital product builder focused on creating practical web solutions using modern
+                        technologies and AI-assisted workflows.</p>
+                </div>
+                <div class="contact-info-compact">
+                    <div class="contact-item"><i class='bx bx-map'></i> Lebanon</div>
+                    <div class="contact-item"><i class='bx bx-phone'></i> +961 71 199 469</div>
+                    <div class="contact-item"><i class='bx bx-envelope'></i> Danoherz1999@gmail.com</div>
+                    <div class="contact-item text-green"><i class='bx bx-check-circle'></i> Open to opportunities</div>
+                </div>
+                <div class="social-links-compact">
+                    <!-- لحذف منصة لا تملكها، قم بحذف السطر الخاص بها -->
+                    <a href="#" class="social-icon"><i class='bx bxl-github'></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="mailto:Danoherz1999@gmail.com" class="social-icon"><i class='bx bx-envelope'></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+            </div>
+        </div>
 
-    <div class="grid">
+        <!-- COLUMN 2: CENTER (IMAGE) -->
+        <div class="grid-col col-center">
+            <div class="hero-image-container">
+                <div class="glow-bg"></div>
+                <div class="grid-bg"></div>
+                <div class="image-wrapper">
+                    <!-- الصورة الشخصية -->
+                    <img src="img.jpg" alt="Daniel Herz" class="profile-img">
+                </div>
+                <div class="signature">Daniel<br>Herz</div>
+            </div>
+        </div>
 
-      <div class="card">
-        <h3>TaskAndReward</h3>
-        <p>Web platform for rewards and CPA-based systems.</p>
-        <a href="https://www.taskandreward.com" target="_blank">Visit Project →</a>
-      </div>
+        <!-- COLUMN 3: RIGHT SIDE -->
+        <div class="grid-col col-right">
+            <!-- Project Card -->
+            <div class="card project-card">
+                <div class="card-header">
+                    <h3><i class='bx bx-code-alt'></i> Featured Project</h3>
+                </div>
+                <div class="project-mini">
+                    <div class="project-logo-mini">
+                        <i class='bx bx-gift'></i> TASK<span style="color: #3B82F6;">AND</span>REWARD
+                    </div>
+                    <p class="subtitle">Web platform for rewards and CPA offers.</p>
+                    <div class="tech-stack-mini">
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">JS</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <div class="project-actions-mini">
+                        <a href="https://taskandreward.com/" target="_blank"
+                            class="btn btn-secondary btn-xs btn-block">Visit Website <i
+                                class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Skills Card -->
+            <div class="card skills-card">
+                <div class="card-header">
+                    <h3><i class='bx bx-star'></i> Skills</h3>
+                </div>
+                <div class="skills-grid-mini">
+                    <div class="skill-item-mini"><i class='bx bx-cube-alt'></i><span>Product Dev</span></div>
+                    <div class="skill-item-mini"><i class='bx bx-brain'></i><span>Problem Solving</span></div>
+                    <div class="skill-item-mini"><i class='bx bx-data'></i><span>Data Handling</span></div>
+                    <div class="skill-item-mini"><i class='bx bx-bot'></i><span>AI Workflows</span></div>
+                    <div class="skill-item-mini"><i class='bx bx-window-alt'></i><span>Web Tech</span></div>
+                    <div class="skill-item-mini"><i class='bx bx-user-pin'></i><span>Management</span></div>
+                </div>
+            </div>
+
+            <!-- Education Card -->
+            <div class="card edu-card">
+                <div class="card-header">
+                    <h3><i class='bx bx-graduation'></i> Education</h3>
+                </div>
+                <div class="edu-list-mini">
+                    <div class="edu-item-mini">
+                        <span class="edu-title-mini">TS2 – Management Info</span>
+                        <span class="badge badge-blue">In Progress</span>
+                    </div>
+                    <div class="edu-divider-mini"></div>
+                    <div class="edu-item-mini">
+                        <span class="edu-title-mini">CS – 1st Year Completed</span>
+                        <span class="badge badge-green">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- CV MODAL -->
+    <div id="cvModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class='bx bx-file'></i> Curriculum Vitae</h3>
+                <button class="close-btn" onclick="closeModal()"><i class='bx bx-x'></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="cv-preview">
+                    <div class="cv-left">
+                        <div class="cv-photo">
+                            <img src="https://via.placeholder.com/150/0B0F19/3B82F6?text=Your+Photo" alt="Profile">
+                        </div>
+                        <h4>Daniel Herz</h4>
+                        <p>Digital Product Builder<br>(AI-Assisted)</p>
+                        <div class="cv-contact">
+                            <div><i class='bx bx-phone'></i> +961 71 199 469</div>
+                            <div><i class='bx bx-envelope'></i> Danoherz1999@gmail.com</div>
+                            <div><i class='bx bx-map'></i> Lebanon</div>
+                        </div>
+                    </div>
+                    <div class="cv-right">
+                        <div class="cv-section">
+                            <h5>ABOUT ME</h5>
+                            <p>Independent digital product builder focused on creating practical web solutions using
+                                modern technologies and AI-assisted workflows.</p>
+                        </div>
+                        <div class="cv-section">
+                            <h5>SKILLS</h5>
+                            <ul class="cv-skills-list">
+                                <li>Product Development</li>
+                                <li>Problem Solving</li>
+                                <li>Data Handling</li>
+                                <li>AI-Assisted Workflows</li>
+                                <li>Self Management</li>
+                                <li>Fast Learning</li>
+                            </ul>
+                        </div>
+                        <div class="cv-section">
+                            <h5>EDUCATION</h5>
+                            <div class="cv-edu-row">
+                                <span>TS2 – Management Informatics</span>
+                                <span class="cv-badge-blue">In Progress</span>
+                            </div>
+                            <div class="cv-edu-row">
+                                <span>Computer Science – First Year Completed</span>
+                                <span class="cv-badge-green">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary btn-block" download="Daniel_Herz_CV.pdf">
+                    <i class='bx bx-download'></i> Download CV (PDF)
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- SKILLS -->
-  <div class="section">
-    <h2>Skills</h2>
-
-    <div class="card">
-      Product development • Problem solving • Data handling • AI-assisted workflows • Self management • Fast learning
-    </div>
-  </div>
-
-  <!-- EDUCATION -->
-  <div class="section">
-    <h2>Education</h2>
-
-    <div class="card">
-      TS2 – Management Informatics (In Progress)<br/>
-      Computer Science – First Year Completed
-    </div>
-  </div>
-
-  <!-- CONTACT -->
-  <div class="section contact">
-    <p>Email: Danoherz1999@gmail.com</p>
-    <p>Phone: +961 71 199 469</p>
-
-    <a class="btn" href="mailto:Danoherz1999@gmail.com">Contact Me</a>
-  </div>
-
-</div>
-
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
 </body>
+
 </html>
