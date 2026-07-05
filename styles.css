@@ -220,7 +220,7 @@ a { text-decoration: none; color: inherit; }
 .cv-preview { display: flex; gap: 30px; }
 .cv-left { width: 200px; text-align: center; }
 .cv-photo { width: 120px; height: 120px; border-radius: 8px; overflow: hidden; margin: 0 auto 15px; background-color: #ddd; }
-.cv-photo img { width: 100%; height: 100%; object-fit: cover; }
+.cv-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .cv-left h4 { font-size: 1.2rem; margin-bottom: 5px; color: #1a1a1a; }
 .cv-left p { color: #555; font-size: 0.8rem; margin-bottom: 20px; }
 .cv-contact { text-align: left; font-size: 0.75rem; color: #444; }
@@ -279,4 +279,13 @@ a { text-decoration: none; color: inherit; }
     .skills-grid-mini { grid-template-columns: repeat(2, 1fr); }
     .hero-buttons { flex-direction: column; }
     .hero-buttons .btn { width: 100%; }
+
+    /* Modal Mobile Fixes */
+    .modal-content { width: 95%; max-height: 90vh; display: flex; flex-direction: column; }
+    .cv-preview { flex-direction: column; gap: 15px; }
+    .cv-left { width: 100%; border-bottom: 1px solid #ddd; padding-bottom: 15px; }
+    .cv-contact { display: flex; flex-direction: column; align-items: center; }
+    .cv-contact div { justify-content: center; }
+    .cv-right { max-height: none; overflow-y: visible; padding-right: 0; }
+    .modal-body { overflow-y: auto; padding: 15px; }
 }
